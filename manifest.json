@@ -1,0 +1,17 @@
+{
+    "name": "Wishful Shopping",
+    "version": "0.01",
+    "description": "All your shopping in one place!",
+    "permissions": ["storage", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Shopping made easy!",
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[    ],
+    "icons": {},
+
+    "manifest_version": 3
+}

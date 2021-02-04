@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+:root {
+    --font: 'Nunito', sans-serif;
+    font-family: var(--font);
+    font-weight: bold;
+    --c2: #03A62C;
+    --c4: #6AD986;
+    --c5: #F2F2F2;
+    --black: #333333;
+    --light-shadow: 0px 0px 16px rgba(106, 217, 134, 0.35);
+    --dark-shadow: 0px 0px 16px #21BF48;
+}
+
+main{
+    padding: 2rem;
+    width: 320px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+main>*{
+    flex-grow: 1;
+}
+
+button{
+    font: var(--font);
+    font-weight: bold;
+    color: var(--c2);
+    font-size: 1rem;
+    padding: 0.6rem;
+    display: flex;
+    place-items: center; 
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+    outline: none;
+    border: none;
+    background-color: white;
+    box-shadow: var(--light-shadow);
+    transition: all ease-in-out 200ms;
+}
+button:hover{
+    box-shadow: var(--dark-shadow);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+button:active{
+    box-shadow: var(--light-shadow), inset var(--light-shadow);
+    
+    cursor: pointer;
+    transform: scale(.95 );
+    transition: all ease-in-out 50ms;
+}
+
+button.scan-button{
+    background-color: var(--c2);
+    color: white;
+    font-size: large;
+}

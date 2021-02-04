@@ -1,0 +1,219 @@
+<link rel="preconnect"
+    href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet">
+<style>
+    #wishful-frame-injection *,
+    #wishful-frame-injection *::before,
+    #wishful-frame-injection *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        z-index: 0;
+    }
+    
+    #wishful-frame-injection{
+        all:unset;
+        --font: 'Nunito', sans-serif;
+        font-family: var(--font);
+        font-weight: bold;
+        --c2: #03A62C;
+        --c4: #6AD986;
+        --c5: #F2F2F2;
+        --black: #333333;
+        --light-shadow: 0px 0px 16px rgba(106, 217, 134, 0.35);
+        --dark-shadow: 0px 0px 16px #21BF48;
+        color: var(--black);
+        min-width: 360px;
+        min-height: 360px;
+        max-height: 1280px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #wishful-frame-injection
+    button{
+        font: var(--font);
+        font-weight: bold;
+        color: var(--c2);
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        place-items: center; 
+        justify-content: center;
+        align-content: center;
+        gap: 8px;
+        outline: none;
+        border: none;
+        background-color: white;
+        box-shadow: var(--light-shadow);
+        transition: all ease-in-out 200ms;
+    }
+    #wishful-frame-injection
+    button:hover{
+        box-shadow: var(--dark-shadow);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+    #wishful-frame-injection
+    button:active{
+        box-shadow: var(--light-shadow), inset var(--light-shadow);
+        
+        cursor: pointer;
+        transform: scale(.95 );
+        transition: all ease-in-out 50ms;
+    }
+
+    #wishful-frame-injection #exit{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin: 32px;
+    }
+    #wishful-frame-injection img{
+        background-color: gray;
+        min-width: 128px;
+        min-height:128px;
+    }
+    #wishful-frame-injection .img-container{
+        position: relative;
+        min-width: 128px;
+        max-width: calc(100% - 128px);
+        width: min-content;
+        min-height: 240px;
+        max-height: 360px;
+        margin: 64px auto;
+        margin-bottom: 16px;
+        background-color: white;
+        box-shadow: var(--light-shadow);
+    }
+    #wishful-frame-injection .img-container img{
+        display: none;
+    }   
+    #wishful-frame-injection .img-container img#main-img{
+        display: block;
+    }
+    #wishful-frame-injection #change-img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-bottom-left-radius: 16px;
+    }
+    #wishful-frame-injection form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 32px;
+        gap: 16px;
+    }
+    #wishful-frame-injection .title-container,
+    #wishful-frame-injection .price-container{
+        color: var(--c2);
+        box-shadow: var(--light-shadow);
+        background-color: white;
+        padding: 12px;
+        color: var(--black);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: left;
+        text-align: left;
+    }
+    #wishful-frame-injection .title-container{
+        flex-grow: 5;
+    }
+    #wishful-frame-injection .price-container{
+        flex-grow: 2;
+    }
+    #wishful-frame-injection label{
+        color: var(--black);
+        font-weight: normal;
+        font-size: 12px;
+        font-style: italic;
+        width: 100%;
+        position: relative;
+        text-align: left;
+    }
+    #wishful-frame-injection input[type="text"]{
+        color: var(--black);
+        padding: 6px;
+        padding-left: 0;
+        font-weight: bold;
+        position: relative;
+        outline: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+    #wishful-frame-injection label::after{
+        content: ' ';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: gray;
+    }
+    #wishful-frame-injection #save-button{
+        background-color: var(--c2);
+        color: white;
+        font-size: large;
+        padding: 12px;
+        flex-grow: 1;
+        height: 64px;
+    }
+</style>
+<main id="wishful-frame-injection">
+
+    <button id="exit">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#333333" stroke-width="2"> </path>
+            <path d="M6 6L18 18" stroke="#333333" stroke-width="2"></path>
+        </svg>
+    </button>
+
+    <div class="img-container">
+        <img src="" alt="" id="main-img">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <button id="change-img">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 3H3V10H10V3Z" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21 3H14V10H21V3Z" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21 14H14V21H21V14Z" stroke="white"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path d="M10 14H3V21H10V14Z" stroke="white"
+                    stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </button>
+    </div>
+
+    <form>
+        <div class="title-container">
+            <input type="text" name="title" id="title-input">
+            <label for="title">name</label>
+        </div>
+        <div class="price-container">
+            <input type="text" name="price" id="price-input">
+            <label for="title">price</label>
+        </div>
+        <button id="save-button">Save</button>
+    </form>
+
+
+
+</main>
